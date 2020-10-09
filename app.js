@@ -21,18 +21,6 @@ const removeTodo = clickedElement => {
   }
 }
 
-formAddTodo.addEventListener('submit', event => {
-  event.preventDefault()  
-
-  const inputValue = event.target.add.value.trim()  
-  addTodo(inputValue)
-})
-
-todosContainer.addEventListener('click', event => {
-  const clickedElement = event.target
-  removeTodo(clickedElement)
-})
-
 const filterTodos = (todos, inputValue, returnMatchedTodo) => {  
   return todos
     .filter(todo => {
@@ -58,6 +46,18 @@ const showTodos = (todos, inputValue) => {
   const todosToShow = filterTodos(todos, inputValue, true)
   manipulateClasses(todosToShow, 'hidden', 'd-flex')
 }
+
+formAddTodo.addEventListener('submit', event => {
+  event.preventDefault()  
+
+  const inputValue = event.target.add.value.trim()  
+  addTodo(inputValue)
+})
+
+todosContainer.addEventListener('click', event => {
+  const clickedElement = event.target
+  removeTodo(clickedElement)
+})
 
 inputFormSearch.addEventListener('input', event => {
   const inputValue = event.target.value.toLowerCase().trim()  
