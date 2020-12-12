@@ -37,7 +37,7 @@ const manipulateClasses = (todos, classToAdd, classToRemove) => {
     })
 }
 
-const hideTodo = (todos, inputValue) => {
+const hideTodos = (todos, inputValue) => {
   const todosToHide = filterTodos(todos, inputValue, false)
   manipulateClasses(todosToHide, 'd-flex', 'hidden')
 }
@@ -63,6 +63,6 @@ inputFormSearch.addEventListener('input', event => {
   const inputValue = event.target.value.toLowerCase().trim()  
   const todos = Array.from(todosContainer.children)
 
-  hideTodo(todos, inputValue)
+  hideTodos(todos, inputValue)
   showTodos(todos, inputValue)
 })
