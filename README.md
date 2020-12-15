@@ -1,6 +1,6 @@
 <h1 align="center">To-do list</h1>
 
-## 📍 Sobre ?
+## 📍 Sobre 
 To-do list é uma aplicação desenvolvida durante meus estudos de JavaScript, no CJRM. Trata-se de uma aplicação que permite ao usuário adicionar, remover e filtrar to-dos.
 
 ## 📚 O que pratiquei/aprendi com essa aplicação?
